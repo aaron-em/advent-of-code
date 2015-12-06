@@ -27,6 +27,10 @@ if (! @is_callable($day['solve'])) {
     croak("Day $day_no doesn't define \$day['solve'] as a function");
 };
 
+set_error_handler(function($errno, $errstr, $errfile, $errline) {
+    croak("Error in $errfile, line $errline: $errstr");
+}, E_ALL);
+
 if ($verbose) print "Day $day_no: running tests\n";
 if ($verbose) print "1.." . sizeof($day['tests']) . "\n";
 $test_no = 0;

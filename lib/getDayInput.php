@@ -10,7 +10,6 @@ function getDayInput($day) {
     } else {
         if (! @$_SERVER['AOC_SESSION_TOKEN']) {
             print "No session token defined in AOC_SESSION_TOKEN env var\n";
-            print_r($_SERVER);
             exit(1);
         };
     

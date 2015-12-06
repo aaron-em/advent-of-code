@@ -1,3 +1,9 @@
 #+TITLE: Advent of Code solutions
 
-* FIXME write this readme
+* What?
+[[http://adventofcode.com][Advent of Code]] is an Advent calendar (sort of) which presents a pair of programming puzzles every day. It's pretty impressively done, with complex problems whose descriptions are occasionally ambiguous and unclear, and have to be resolved by careful analysis of the problem domain and the given test cases, not all of which suffice to fully validate an approach -- there's at least one problem where it's quite easy to write code which will pass the test cases and fail the real thing. You know, just like real life.
+
+These are my solutions.
+
+* Why?
+Specifically, "why PHP?" Because I haven't made any real use of the language in several years, and that's not a good way to stay skilled in any language. Beyond blowing off the dust, it's a good opportunity to investigate aspects of PHP development, like unit testing frameworks and complex OO code, which I wasn't able to in my prior use of the language.
