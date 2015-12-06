@@ -1,9 +1,8 @@
 <?
-$day = array(
-    'tests' => array(
-    ),
+namespace AoC;
 
-    'solve' => function($input) {
+class Day {
+    public function solve($input) {
         global $verbose;
         
         $result1 = null;
@@ -39,5 +38,5 @@ $day = array(
         
         return array($result1, $result2);
     }
-);
+}
 ?>

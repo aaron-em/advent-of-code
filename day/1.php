@@ -1,18 +1,8 @@
 <?
-$day = array(
-    'tests' => array(
-        '(())' => array(0, null),
-        '()()' => array(0, null),
-        '(((' => array(3, null),
-        '(()(()(' => array(3, null),
-        '))(((((' => array(3, 1),
-        '())' => array(-1, 3),
-        '))(' => array(-1, 1),
-        ')))' => array(-3, 1),
-        ')())())' => array(-3, 1)
-    ),
+namespace AoC;
 
-    'solve' => function($input) {
+class Day {
+    public function solve($input) {
         $chars = str_split($input);
         $result1 = 0;
         $result2 = null;
@@ -32,5 +22,5 @@ $day = array(
 
         return array($result1, $result2);
     }
-);
+}
 ?>

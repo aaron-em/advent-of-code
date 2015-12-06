@@ -1,12 +1,8 @@
 <?
-$day = array(
-    'tests' => array(
-        '2x3x4' => array(58, 34),
-        '1x1x10' => array(43, 14),
-        '3x3x3' => array(63, 39)
-    ),
+namespace AoC;
 
-    'solve' => function($input) {
+class Day {
+    public function solve($input) {
         $result1 = 0;
         $result2 = 0;
         $lines = preg_split('/\\n/', $input);
@@ -46,5 +42,5 @@ $day = array(
 
         return array($result1, $result2);
     }
-);
+}
 ?>

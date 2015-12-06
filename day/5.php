@@ -1,17 +1,8 @@
 <?
-$day = array(
-    'tests' => array(
-        'ugknbfddgicrmopn' => array(1, 0),
-        'aaa' => array(1, 0),
-        'jchzalrnumimnmhp' => array(0, 0),
-        'haegwjzuvuyypxyu' => array(0, 0),
-        'dvszwmarrgswjxmb' => array(0, 0),
-        "aaa\neee\naxy\n" => array(2, 0),
-        "qjhvhtzxzqqjkmpb" => array(0, 1),
-        "xxyxx" => array(0, 1)
-    ),
+namespace AoC;
 
-    'solve' => function($input) {
+class Day {
+    public function solve($input) {
         $result1 = 0; // nice count
         $result2 = 0;
 
@@ -86,5 +77,5 @@ $day = array(
 
         return array($result1, $result2);
     }
-);
+}
 ?>

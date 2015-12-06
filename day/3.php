@@ -1,12 +1,8 @@
 <?
-$day = array(
-    'tests' => array(
-        '^v' => array(2, 3),
-        '^>v<' => array(4, 3),
-        '^v^v^v^v^v' => array(2, 11)
-    ),
+namespace AoC;
 
-    'solve' => function($input) {
+class Day {
+    public function solve($input) {
         $pos = array(
             array(0, 0), // santa
             array(0, 0)  // robo-santa
@@ -88,5 +84,5 @@ $day = array(
 
         return array($result1, $result2);
     }
-)
+}
 ?>
