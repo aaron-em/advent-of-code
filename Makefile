@@ -1,7 +1,7 @@
 SHELL=/bin/bash
-.PHONY: all envcheck composer-install test days
+.PHONY: all envcheck envprep test days
 
-all: envcheck composer-install test days
+all: envcheck envprep test days
 
 envcheck:
 	@php -r 'if (function_exists("curl_init")) { exit(0); } else { print "===\ncURL extension is required but not installed\n===\n"; exit(1); };'
@@ -9,9 +9,11 @@ envcheck:
 	@which composer; \
 		if [[ "$?" != "0" ]]; then echo "===\nNo Composer install found via 'which composer'\n==="; exit 1; fi
 
-composer-install:
+envprep:
 	composer update
 	composer dump-autoload
+  [ ! -d private ] && mkdir private
+  [ ! -d input ] && mkdir input
 
 test:
 	for test in $$(ls test/day | cut -d. -f1 | sort -n); \
