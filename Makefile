@@ -1,5 +1,5 @@
 SHELL=/bin/bash
-.PHONY: all envcheck envprep test days
+.PHONY: all envcheck envprep test days day
 
 all: envcheck envprep test days
 
@@ -27,3 +27,6 @@ days:
 			RUN_BY_MAKE=yes php -f day.php $$day; \
 		if [[ "$$?" != "0" ]]; then exit $$?; fi \
 		done
+
+day:
+	time RUN_BY_MAKE=yes php -f day.php $(DAY)
