@@ -21,7 +21,7 @@ test:
 		done
 
 days:
-	time\
+	time \
 	for day in $$(ls day | cut -d. -f1 | sort -n); \
 		do AOC_SESSION_TOKEN="$$(cat private/token)" \
 			RUN_BY_MAKE=yes php -f day.php $$day; \
