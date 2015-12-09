@@ -12,18 +12,18 @@ envcheck:
 envprep:
 	composer update
 	composer dump-autoload
-  [ ! -d private ] && mkdir private
-  [ ! -d input ] && mkdir input
+	[ ! -d private ] && mkdir private
+	[ ! -d input ] && mkdir input
 
 test:
 	for test in $$(ls test/day | cut -d. -f1 | sort -n); \
-	  do vendor/bin/mat test test/day/$$test.php; \
-    done
+		do vendor/bin/mat test test/day/$$test.php; \
+		done
 
 days:
-	time\
-  for day in $$(ls day | cut -d. -f1 | sort -n); \
+	time \
+	for day in $$(ls day | cut -d. -f1 | sort -n); \
 		do AOC_SESSION_TOKEN="$$(cat private/token)" \
 			RUN_BY_MAKE=yes php -f day.php $$day; \
-    if [[ "$$?" != "0" ]]; then exit $$?; fi \
+		if [[ "$$?" != "0" ]]; then exit $$?; fi \
 		done
