@@ -29,4 +29,6 @@ days:
 		done
 
 day:
-	time RUN_BY_MAKE=yes php -f day.php $(DAY)
+	time AOC_SESSION_TOKEN="$$(cat private/token)" \
+		RUN_BY_MAKE=yes \
+		php -f day.php $(DAY)
