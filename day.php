@@ -1,4 +1,5 @@
 <?
+include('vendor/autoload.php');
 include('lib/getDayInput.php');
 
 $verbose = !(@$_SERVER['RUN_BY_MAKE']);

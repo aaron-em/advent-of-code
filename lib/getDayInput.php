@@ -30,6 +30,7 @@ function getDayInput($day) {
             exit(2);
         } else if ($result['http_code'] !== 200) {
             print 'Server returned HTTP ' . $result['http_code'] . "\n";
+            print "\n$result_body\n";
             exit(1);
         } else {
             file_put_contents($inputFile, $result_body);
